@@ -26,7 +26,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 export default function RevenueChart() {
   return (
-    <div className="glass" style={{ padding: "20px 22px" }}>
+    <div className="glass" style={{ padding: "20px 22px", flex: 1 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
         <div>
           <p style={{ fontSize: 15, fontWeight: 600, color: "#fff" }}>Monthly Revenue</p>

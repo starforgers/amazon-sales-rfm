@@ -27,8 +27,8 @@ export default function DashboardView() {
 
       <KPICards />
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
-        <div style={{ gridColumn: "1 / 3" }}><RevenueChart /></div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12, alignItems: "stretch" }}>
+        <div style={{ gridColumn: "1 / 3", display: "flex" }}><RevenueChart /></div>
         <StatusDonut />
       </div>
 

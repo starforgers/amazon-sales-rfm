@@ -18,7 +18,7 @@ export default function StatusDonut() {
   const total = statusBreakdown.reduce((s, d) => s + d.value, 0);
 
   return (
-    <div className="glass" style={{ padding: "20px 22px" }}>
+    <div className="glass" style={{ padding: "20px 22px", height: "100%" }}>
       <p style={{ fontSize: 15, fontWeight: 600, color: "#fff" }}>Order Status</p>
       <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", marginTop: 2, marginBottom: 4 }}>
         {total.toLocaleString()} total orders
