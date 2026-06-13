@@ -20,7 +20,11 @@ csv/             Raw and cleaned datasets
 dashboard/       React/Vite frontend
 ```
 
-## Running the dashboard
+## Dashboard
+
+Live at **[dashboard-sy-projs.vercel.app](https://dashboard-sy-projs.vercel.app)**
+
+To run locally:
 
 ```bash
 cd dashboard
