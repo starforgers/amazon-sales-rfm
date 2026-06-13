@@ -1,0 +1,150 @@
+customer,recency,frequency,monetary,R_score,F_score,M_score,RFM_score,segment
+Mulberries Boutique,37,10,2094070.5,4,5,5,455,Champions
+Amani Concept Trading Llc (Kapda),201,3,930451.0,2,5,5,255,At Risk
+Vaharsha Boutique,89,4,588760.0,3,5,5,355,Potential Loyalists
+Galaxy Group Of Companies Pvt. Ltd,220,1,445058.0,2,1,5,215,At Risk
+Rivaan Llc,240,1,443042.0,1,3,5,135,At Risk
+Bhanu Saleine Naunitham,13,4,429098.0,5,5,5,555,Champions
+Sure Fashions Llc,281,1,403253.0,1,3,5,135,At Risk
+Cotton Closet Ltd,307,1,345265.0,1,1,5,115,At Risk
+Visha Devan,82,3,321028.0,3,5,5,355,Potential Loyalists
+Nirusah Tailoring,219,1,316470.0,2,2,5,225,At Risk
+Vishal Darshan Boutique,210,3,316277.0,2,5,5,255,At Risk
+Rino Sandaran,12,5,308435.5,5,5,5,555,Champions
+Thana Marimuthu,28,11,297736.0,5,5,5,555,Champions
+Ethnic Weaves Fashion Llc,79,1,294906.0,3,1,5,315,Needs Attention
+Fusion Fashions Corp.,63,5,271675.0,4,5,5,455,Champions
+Anju Bharati,190,1,241864.0,2,1,5,215,At Risk
+Thilas Bombay Boutique Sdn Bhd,96,1,232506.0,3,4,5,345,Potential Loyalists
+Shilpi Kumari,70,1,221565.0,4,3,5,435,Loyal
+Tanuj Uppal,174,2,218110.0,2,5,5,255,At Risk
+Avin,16,8,215279.0,5,5,5,555,Champions
+Rina Thakurta,77,1,206094.0,3,3,5,335,Potential Loyalists
+Revathy Loganathan,73,10,197381.0,4,5,5,455,Champions
+Ibrahim Mafthooh(Janasya.In),68,4,189286.0,4,5,5,455,Champions
+Kalaivani Permalu,139,2,176538.0,3,4,5,345,Potential Loyalists
+M/S Charismakurties(Dubai),233,2,173968.0,2,4,5,245,At Risk
+Khanjana Mojee,70,2,156428.0,4,4,5,445,Champions
+Nitharsha,322,1,154858.0,1,3,5,135,At Risk
+Mohana Karthik,75,1,154836.0,4,2,5,425,Big Spenders
+Millenius Ventures,209,1,149884.0,2,2,5,225,At Risk
+Meera Rasadurai,212,2,148382.0,2,4,5,245,At Risk
+Maavi Fashion,131,1,136428.0,3,2,4,324,Needs Attention
+Arkh Fashion Boutique Pty Ltd,216,1,129280.0,2,1,4,214,At Risk
+Mrs. Sumitha Raju,61,3,125630.0,4,5,4,454,Champions
+Mangrowtee Sookdeb,84,2,125368.0,3,4,4,344,Potential Loyalists
+Dhenooga Ravintheran,19,4,119250.5,5,5,4,554,Champions
+Punithavathy Karupiah,76,2,117672.0,4,4,4,444,Champions
+Ambika Syam Sundar,50,1,117079.0,4,1,4,414,Big Spenders
+Vini’S Authentic Indian Ethnic Wear,77,5,112063.0,3,5,4,354,Potential Loyalists
+Monisyaa,211,4,108343.0,2,5,4,254,At Risk
+Kaveenaz Collection,22,3,106692.0,5,5,4,554,Champions
+Daneshwary Ramar,45,3,99565.0,4,5,4,454,Champions
+Sindhu,87,2,92612.0,3,5,4,354,Potential Loyalists
+Yasshliny Kunju,70,1,90972.0,4,4,4,444,Champions
+Bincy Skaria,260,1,90357.0,1,1,4,114,At Risk
+Kogila Sellappan,223,6,89641.0,2,5,4,254,At Risk
+Mr.Jeyaraj,47,3,78300.0,4,5,4,454,Champions
+Turgah Muthu Kumar,64,1,75435.0,4,4,4,444,Champions
+Viknes Threads Collection,63,1,73014.0,4,4,4,444,Champions
+Jeannie Thein Win,17,1,71400.0,5,2,4,524,Big Spenders
+Harsiniy Kumareson,45,4,69326.0,4,5,4,454,Champions
+Diya Designs,6,1,69270.0,5,1,4,514,Big Spenders
+Deeparati Mukherjee,195,1,68026.0,2,1,4,214,At Risk
+Fusion Fashions Corp. (Gopikas),36,1,67840.0,4,1,4,414,Big Spenders
+Chaaya Sookdeb,34,1,67425.0,5,1,4,514,Big Spenders
+Mallar Mahalingam,76,1,67088.0,4,2,4,424,Big Spenders
+Tanusree Majumder,2,5,66148.0,5,5,4,554,Champions
+Alameloo(Mala),108,3,65941.0,3,5,4,354,Potential Loyalists
+Mangalam Shop,335,1,65504.0,1,2,4,124,At Risk
+Suumaya Clothing,154,1,63950.0,2,3,4,234,At Risk
+Swati Reddy,17,3,63820.0,5,5,4,554,Champions
+Randhir Chaudhary,192,1,63798.0,2,3,3,233,At Risk
+Remmia Mathews,65,2,63469.0,4,4,3,443,Loyal
+Nitha Pushpangadan Sarala,41,2,63303.0,4,4,3,443,Loyal
+Gajanan,1,2,59887.5,5,4,3,543,Loyal
+Nalini,91,2,57844.0,3,4,3,343,Potential Loyalists
+Mrs Devianee Ballah,203,1,55006.0,2,2,3,223,Hibernating
+Khusboo Beeharry,300,1,54930.0,1,2,3,123,Hibernating
+Razia Roseane Naser,275,3,54390.0,1,5,3,153,At Risk
+Anu Ranjani Anpalagan,148,1,53372.0,2,1,3,213,Lost
+Priyanka Gupta,26,1,53260.0,5,3,3,533,Loyal
+Vendan,238,1,49439.0,2,4,3,243,At Risk
+Vinodha Puspanathan,278,1,49209.0,1,4,3,143,At Risk
+Kazi Nuran Haque,161,1,48534.0,2,2,3,223,Hibernating
+Abdul Rahman(Singapore),147,2,48106.0,2,4,3,243,At Risk
+Nathiya Reddy,64,2,45974.0,4,4,3,443,Loyal
+K.Parthiban,128,1,44758.0,3,2,3,323,Needs Attention
+The Pink Market,35,1,42850.0,4,4,3,443,Loyal
+Radhika Santhosh,44,1,41583.0,4,3,3,433,Loyal
+Okasina Trading,45,1,41105.0,4,3,3,433,Loyal
+Puvanes Gannasin,206,4,40010.0,2,5,3,253,At Risk
+Ria Fashion,6,3,39975.1,5,5,3,553,Loyal
+Syeda Morshed,318,1,38291.0,1,3,3,133,At Risk
+Abbi Collection,96,1,37114.0,3,1,3,313,Needs Attention
+Banuja Rasakody,167,2,36189.0,2,4,3,243,At Risk
+Natheliya,36,1,35675.0,4,2,3,423,New / Recent
+Mr. Gopaldas,150,1,34712.0,2,2,3,223,Hibernating
+Tharsika Eugin,104,1,33026.0,3,4,3,343,Potential Loyalists
+Arkh Fashion,269,2,32690.0,1,4,3,143,At Risk
+Addven Solutions Private Limited,204,1,32228.0,2,1,3,213,Lost
+Ravinder Vaid,52,1,32030.0,4,3,2,432,Loyal
+Sanchita Karki,48,1,30533.0,4,3,2,432,Loyal
+Valli Arangan Fashion,13,1,29162.5,5,4,2,542,Loyal
+Enthulega,142,1,28582.0,3,1,2,312,Needs Attention
+Devy,218,1,28072.0,2,1,2,212,Lost
+Faria Essopp,338,1,27989.0,1,1,2,112,Lost
+Nayana Sawlani,85,1,27782.0,3,2,2,322,Needs Attention
+Siva,3,1,27199.0,5,3,2,532,Loyal
+Vinodha,2,1,27142.5,5,4,2,542,Loyal
+Aruna Devi,292,1,26952.0,1,1,2,112,Lost
+Yashwini Reddy,260,1,26950.0,1,4,2,142,At Risk
+Lekshmi,115,1,26712.0,3,2,2,322,Needs Attention
+R. Vikneswari,21,1,26687.5,5,3,2,532,Loyal
+Jevi,103,1,26654.0,3,2,2,322,Needs Attention
+Mrs. Tharani Sathiyanathan,80,1,26340.0,3,2,2,322,Needs Attention
+Rakshanda Mahajan,21,1,25938.5,5,3,2,532,Loyal
+Thana Nagisswary L Marimuthu,331,1,25195.0,1,3,2,132,At Risk
+Sweety Akhter,119,1,24760.0,3,3,2,332,Potential Loyalists
+Mangai Prabhakar,79,1,24734.0,3,2,2,322,Needs Attention
+Rega,285,1,24250.0,1,3,2,132,At Risk
+Bissy Skaria,107,1,23096.0,3,1,2,312,Needs Attention
+Amandeep Kaur,28,1,21950.0,5,1,2,512,New / Recent
+Divya,101,1,21126.0,3,1,2,312,Needs Attention
+Kamala Rengasamy,15,2,20980.0,5,4,2,542,Loyal
+Geetha Raja Gopal,206,1,20900.0,2,1,2,212,Lost
+Ranjana Dev Devraj,85,1,20884.0,3,3,2,332,Potential Loyalists
+Dishanu Fashion World,5,2,20752.5,5,4,2,542,Loyal
+Mizna Waheedh,323,1,18332.0,1,2,2,122,Hibernating
+Thevi Murugaiah,76,1,18072.0,4,4,2,442,Loyal
+Sugitha Sughumaran,104,1,17940.0,3,3,2,332,Potential Loyalists
+Yamunah Puspanathan,266,2,17899.0,1,5,1,151,At Risk
+Mrs Sumitha Raju,17,1,17212.5,5,2,1,521,New / Recent
+Swati(Singapore),120,1,17124.0,3,3,1,331,Potential Loyalists
+Raj.,166,1,17118.0,2,3,1,231,At Risk
+Khirthika,127,1,17000.0,3,2,1,321,Needs Attention
+Arangan Fashions,50,1,16733.0,4,1,1,411,New / Recent
+Vintage India Nyc,317,1,15482.0,1,4,1,141,At Risk
+Babitha Huxley,5,1,14302.95,5,1,1,511,New / Recent
+Tassels Ltd,44,1,13270.0,4,3,1,431,Loyal
+Manish Dhoorundhur,239,1,13041.0,2,2,1,221,Hibernating
+Murugesan Chandra,232,1,12364.0,2,2,1,221,Hibernating
+Bhavananthini,24,1,12290.0,5,1,1,511,New / Recent
+Aanchol,300,1,11452.0,1,1,1,111,Lost
+Moniyshaa,303,1,11186.0,1,2,1,121,Hibernating
+Lazy Daisy Co Ltd,3,1,10983.89,5,2,1,521,New / Recent
+Siri Padala,327,1,10129.0,1,3,1,131,At Risk
+Rishikesh Dashputre,288,1,10057.0,1,3,1,131,At Risk
+G Janani,28,1,9500.0,5,1,1,511,New / Recent
+Harsiniy Kumar,28,1,8975.0,5,1,1,511,New / Recent
+Kasthuri Ramasamy,45,1,8970.0,4,2,1,421,New / Recent
+Manjulika Gupta,225,1,8430.0,2,2,1,221,Hibernating
+Ajs Indian Boutique,24,1,8368.75,5,1,1,511,New / Recent
+Reka Rasakody,275,1,8223.0,1,3,1,131,At Risk
+Sushama Borhade,12,1,8012.5,5,3,1,531,Loyal
+Vahlaarmathy,248,1,6923.0,1,4,1,141,At Risk
+Mr.Alwar Murali,328,1,6460.0,1,2,1,121,Hibernating
+Mr Alwar Murali,281,1,6418.0,1,2,1,121,Hibernating
+Akash Kaushal,247,1,5580.0,1,1,1,111,Lost
+Kiruthika V Sureshbabu,245,1,5231.0,1,2,1,121,Hibernating
+Shweta,304,1,5058.0,1,3,1,131,At Risk
