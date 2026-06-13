@@ -27,7 +27,7 @@ export default function App() {
       <Sidebar activeView={activeView} onNav={setActiveView} />
 
       <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
-        <main style={{ flex: 1, padding: "24px 28px", display: "flex", flexDirection: "column", gap: 20, overflowY: "auto" }}>
+        <main style={{ flex: 1, padding: "28px 28px", display: "flex", flexDirection: "column", gap: 16, overflowY: "auto" }}>
           <ViewComponent />
         </main>
       </div>
@@ -35,19 +35,18 @@ export default function App() {
       {activeView === "Dashboard" && (
         <div className="rfm-panel-col" style={{
           width: 320, flexShrink: 0,
-          background: "rgba(255,255,255,0.08)",
-          backdropFilter: "blur(30px)",
-          borderLeft: "1px solid rgba(255,255,255,0.15)",
-          padding: "24px 16px",
+          background: "#000",
+          borderLeft: "1px solid rgba(84,84,88,0.65)",
+          padding: "28px 16px",
           overflowY: "auto",
           display: "flex", flexDirection: "column", gap: 16,
         }}>
           <div>
-            <p style={{ fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.4)", letterSpacing: 1.2, textTransform: "uppercase" }}>
+            <p style={{ fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.4)", letterSpacing: 0.5, textTransform: "uppercase" }}>
               RFM Intelligence
             </p>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.35)", marginTop: 2 }}>
-              Customer Sales dataset · 149 customers
+            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 2 }}>
+              149 B2B customers
             </p>
           </div>
           <RFMPanel />

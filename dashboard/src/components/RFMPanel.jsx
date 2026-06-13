@@ -6,36 +6,33 @@ const CustomTooltip = ({ active, payload }) => {
   if (!active || !payload?.length) return null;
   const d = payload[0].payload;
   return (
-    <div style={{
-      background: "rgba(20,10,5,0.8)", backdropFilter: "blur(12px)",
-      border: "1px solid rgba(255,255,255,0.15)", borderRadius: 10, padding: "10px 14px",
-    }}>
+    <div style={{ background: "#2c2c2e", borderRadius: 12, padding: "10px 14px", maxWidth: 200 }}>
       <p style={{ color: "#fff", fontWeight: 600, fontSize: 13 }}>{d.segment}</p>
-      <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 11 }}>{d.customers} customers · {d.pct}%</p>
-      <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 11, marginTop: 4, maxWidth: 180 }}>
+      <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 12, marginTop: 2 }}>{d.customers} customers · {d.pct}%</p>
+      <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 11, marginTop: 6, lineHeight: 1.4 }}>
         {segmentActions[d.segment]}
       </p>
     </div>
   );
 };
 
-function SegmentBadge({ segment, size = "sm" }) {
+function SegmentBadge({ segment }) {
   const colors = {
-    "Champions":           "#10B981",
-    "Loyal":               "#3B82F6",
-    "Big Spenders":        "#F97316",
-    "New / Recent":        "#06B6D4",
-    "Potential Loyalists": "#8B5CF6",
-    "Needs Attention":     "#F59E0B",
-    "At Risk":             "#EF4444",
-    "Hibernating":         "#6B7280",
-    "Lost":                "#9CA3AF",
+    "Champions":           "#34c759",
+    "Loyal":               "#007aff",
+    "Big Spenders":        "#ff9500",
+    "New / Recent":        "#5ac8fa",
+    "Potential Loyalists": "#af52de",
+    "Needs Attention":     "#ffcc00",
+    "At Risk":             "#ff3b30",
+    "Hibernating":         "#8e8e93",
+    "Lost":                "#636366",
   };
-  const c = colors[segment] || "#9CA3AF";
+  const c = colors[segment] || "#8e8e93";
   return (
     <span style={{
-      fontSize: size === "sm" ? 10 : 11, fontWeight: 600, padding: "2px 7px", borderRadius: 5,
-      background: `${c}25`, color: c, border: `1px solid ${c}40`,
+      fontSize: 10, fontWeight: 600, padding: "2px 7px", borderRadius: 5,
+      background: `${c}20`, color: c,
     }}>{segment}</span>
   );
 }
@@ -44,26 +41,23 @@ export default function RFMPanel() {
   const [tab, setTab] = useState("segments");
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      {/* Tab switcher */}
-      <div className="glass" style={{ padding: "4px", display: "flex", gap: 4 }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+      <div className="glass-strong" style={{ padding: 4, display: "flex", gap: 2 }}>
         {[["segments", "RFM Segments"], ["customers", "Top Customers"]].map(([key, label]) => (
           <button key={key} onClick={() => setTab(key)} style={{
             flex: 1, padding: "8px", borderRadius: 10, border: "none", cursor: "pointer",
-            background: tab === key ? "rgba(255,255,255,0.25)" : "transparent",
-            color: tab === key ? "#fff" : "rgba(255,255,255,0.5)",
-            fontSize: 12, fontWeight: 600, transition: "all 0.2s",
-            backdropFilter: tab === key ? "blur(10px)" : "none",
+            background: tab === key ? "#007aff" : "transparent",
+            color: tab === key ? "#fff" : "rgba(255,255,255,0.45)",
+            fontSize: 12, fontWeight: 600, transition: "all 0.15s",
           }}>{label}</button>
         ))}
       </div>
 
       {tab === "segments" ? (
         <>
-          {/* Donut chart */}
-          <div className="glass" style={{ padding: "16px 22px" }}>
-            <p style={{ fontSize: 13, fontWeight: 700, color: "#fff", marginBottom: 4 }}>Customer Segments</p>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 12 }}>
+          <div className="glass" style={{ padding: "16px 18px" }}>
+            <p style={{ fontSize: 15, fontWeight: 600, color: "#fff" }}>Customer Segments</p>
+            <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", marginTop: 2, marginBottom: 12 }}>
               {rfmSegments.reduce((s, d) => s + d.customers, 0)} customers · RFM model
             </p>
             <ResponsiveContainer width="100%" height={180}>
@@ -78,33 +72,32 @@ export default function RFMPanel() {
               </PieChart>
             </ResponsiveContainer>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 4 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 7, marginTop: 4 }}>
               {rfmSegments.map(d => (
                 <div key={d.segment} style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                    <div style={{ width: 8, height: 8, borderRadius: 2, background: d.color, flexShrink: 0 }} />
-                    <span style={{ fontSize: 11, color: "rgba(255,255,255,0.75)" }}>{d.segment}</span>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div style={{ width: 7, height: 7, borderRadius: "50%", background: d.color, flexShrink: 0 }} />
+                    <span style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }}>{d.segment}</span>
                   </div>
                   <div style={{ display: "flex", gap: 10 }}>
-                    <span style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", minWidth: 28, textAlign: "right" }}>{d.customers}</span>
-                    <span style={{ fontSize: 11, fontWeight: 600, color: d.color, minWidth: 34, textAlign: "right" }}>{d.pct}%</span>
+                    <span style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", minWidth: 24, textAlign: "right" }}>{d.customers}</span>
+                    <span style={{ fontSize: 12, fontWeight: 600, color: d.color, minWidth: 34, textAlign: "right" }}>{d.pct}%</span>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Action map */}
-          <div className="glass" style={{ padding: "16px 22px" }}>
-            <p style={{ fontSize: 13, fontWeight: 700, color: "#fff", marginBottom: 12 }}>Segment Actions</p>
+          <div className="glass" style={{ padding: "16px 18px" }}>
+            <p style={{ fontSize: 15, fontWeight: 600, color: "#fff", marginBottom: 12 }}>Segment Actions</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {rfmSegments.slice(0, 5).map(d => (
                 <div key={d.segment} style={{
-                  padding: "8px 10px", borderRadius: 8,
-                  background: `${d.color}12`, border: `1px solid ${d.color}25`,
+                  padding: "10px 12px", borderRadius: 10,
+                  background: `${d.color}12`,
                 }}>
                   <SegmentBadge segment={d.segment} />
-                  <p style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 4, lineHeight: 1.4 }}>
+                  <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 6, lineHeight: 1.45 }}>
                     {segmentActions[d.segment]}
                   </p>
                 </div>
@@ -113,33 +106,33 @@ export default function RFMPanel() {
           </div>
         </>
       ) : (
-        <div className="glass" style={{ padding: "16px 22px" }}>
-          <p style={{ fontSize: 13, fontWeight: 700, color: "#fff", marginBottom: 4 }}>Top Customers</p>
-          <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 14 }}>by lifetime monetary value</p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+        <div className="glass" style={{ padding: "16px 18px" }}>
+          <p style={{ fontSize: 15, fontWeight: 600, color: "#fff" }}>Top Customers</p>
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 14, marginTop: 2 }}>by lifetime value</p>
+          <div style={{ display: "flex", flexDirection: "column" }}>
             {topCustomers.map((c, i) => (
               <div key={c.customer} style={{
                 display: "flex", alignItems: "flex-start", justifyContent: "space-between",
-                padding: "10px 0",
-                borderBottom: i < topCustomers.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
+                padding: "11px 0",
+                borderBottom: i < topCustomers.length - 1 ? "1px solid rgba(84,84,88,0.3)" : "none",
                 gap: 8,
               }}>
                 <div style={{ display: "flex", gap: 10, alignItems: "flex-start", minWidth: 0 }}>
                   <div style={{
                     width: 28, height: 28, borderRadius: "50%", flexShrink: 0,
-                    background: `hsl(${i * 37}, 60%, 55%)`,
+                    background: `hsl(${i * 37 + 200}, 65%, 55%)`,
                     display: "flex", alignItems: "center", justifyContent: "center",
                     fontSize: 11, fontWeight: 700, color: "#fff",
                   }}>
                     {c.customer.charAt(0)}
                   </div>
                   <div style={{ minWidth: 0 }}>
-                    <p style={{ fontSize: 12, fontWeight: 600, color: "#fff", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: 160 }}>
+                    <p style={{ fontSize: 13, fontWeight: 600, color: "#fff", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: 140 }}>
                       {c.customer}
                     </p>
-                    <div style={{ display: "flex", gap: 6, marginTop: 3, flexWrap: "wrap" }}>
+                    <div style={{ display: "flex", gap: 6, marginTop: 3, flexWrap: "wrap", alignItems: "center" }}>
                       <SegmentBadge segment={c.segment} />
-                      <span style={{ fontSize: 10, color: "rgba(255,255,255,0.4)" }}>R={c.recency}d · F={c.frequency}x</span>
+                      <span style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>R={c.recency}d · F={c.frequency}x</span>
                     </div>
                   </div>
                 </div>
@@ -147,7 +140,7 @@ export default function RFMPanel() {
                   <p style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>
                     ₹{(c.monetary / 1e5).toFixed(1)}L
                   </p>
-                  <p style={{ fontSize: 10, color: "rgba(255,255,255,0.4)" }}>RFM {c.rfm}</p>
+                  <p style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>RFM {c.rfm}</p>
                 </div>
               </div>
             ))}

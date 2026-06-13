@@ -1,18 +1,15 @@
 import { statusBreakdown } from "../data/dashboardData";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 
-const COLORS = ["#60a5fa", "#34d399", "#f87171", "#a78bfa", "#fb923c"];
+const COLORS = ["#007aff", "#34c759", "#ff3b30", "#af52de", "#ff9500"];
 
 const CustomTooltip = ({ active, payload }) => {
   if (!active || !payload?.length) return null;
   const d = payload[0].payload;
   return (
-    <div style={{
-      background: "rgba(20,10,5,0.8)", backdropFilter: "blur(12px)",
-      border: "1px solid rgba(255,255,255,0.15)", borderRadius: 10, padding: "10px 14px",
-    }}>
+    <div style={{ background: "#2c2c2e", borderRadius: 12, padding: "10px 14px" }}>
       <p style={{ color: "#fff", fontWeight: 600, fontSize: 13 }}>{d.name}</p>
-      <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 11 }}>{d.value.toLocaleString()} orders</p>
+      <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 12, marginTop: 2 }}>{d.value.toLocaleString()} orders</p>
     </div>
   );
 };
@@ -22,8 +19,10 @@ export default function StatusDonut() {
 
   return (
     <div className="glass" style={{ padding: "20px 22px" }}>
-      <p style={{ fontSize: 13, fontWeight: 700, color: "#fff", marginBottom: 4 }}>Order Status Mix</p>
-      <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 4 }}>All {total.toLocaleString()} orders</p>
+      <p style={{ fontSize: 15, fontWeight: 600, color: "#fff" }}>Order Status</p>
+      <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", marginTop: 2, marginBottom: 4 }}>
+        {total.toLocaleString()} total orders
+      </p>
 
       <ResponsiveContainer width="100%" height={140}>
         <PieChart>
@@ -35,14 +34,14 @@ export default function StatusDonut() {
         </PieChart>
       </ResponsiveContainer>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
         {statusBreakdown.map((d, i) => (
           <div key={d.name} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-              <div style={{ width: 8, height: 8, borderRadius: 2, background: COLORS[i] }} />
-              <span style={{ fontSize: 11, color: "rgba(255,255,255,0.7)" }}>{d.name}</span>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <div style={{ width: 7, height: 7, borderRadius: "50%", background: COLORS[i], flexShrink: 0 }} />
+              <span style={{ fontSize: 12, color: "rgba(255,255,255,0.6)" }}>{d.name}</span>
             </div>
-            <span style={{ fontSize: 11, fontWeight: 600, color: COLORS[i] }}>
+            <span style={{ fontSize: 12, fontWeight: 600, color: COLORS[i] }}>
               {((d.value / total) * 100).toFixed(1)}%
             </span>
           </div>
